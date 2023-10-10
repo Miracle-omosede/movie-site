@@ -18,8 +18,8 @@ try {
 
 const App = () => {
   return(
-    <div>
-
+    <div className="font-gabraito" >
+        Hello there!
     </div>
   );
 };
