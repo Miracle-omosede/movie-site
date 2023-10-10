@@ -1,23 +1,27 @@
-import { useEffect } from "react"
-import "./App.css"
+import "./App.css";
+const url = 'https://imdb8.p.rapidapi.com/auto-complete?q=game%20of%20thr';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'd2910fcb91msh8f8eead376a8f8cp11587ajsndd60aa322734',
+		'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
+	}
+};
 
-// API KEY = 84a345cf
-
-const API_URL = 'http://www.omdbapi.com/?apikey=84a345cf&'
-
-const App = () => {
-   const searchMovies = async(title) => {
-    const response = await fetch(`${API_URL}&s=${title}`)
-    const data = await response.json();
-
-    console.log(data)
-   }
-  useEffect(() => {
-    searchMovies('Spiderman');
-  }, [])
-  return (
-<div></div>
-  )
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
 }
 
-export default App
+const App = () => {
+  return(
+    <div>
+
+    </div>
+  );
+};
+
+export default App;
