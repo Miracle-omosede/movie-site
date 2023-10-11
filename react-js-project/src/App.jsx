@@ -1,4 +1,5 @@
 import "./App.css";
+import Home from "./pages/Home";
 const url = 'https://imdb8.p.rapidapi.com/auto-complete?q=game%20of%20thr';
 const options = {
 	method: 'GET',
@@ -19,7 +20,7 @@ try {
 const App = () => {
   return(
     <div className="font-gabraito" >
-        Hello there!
+        <Home/>
     </div>
   );
 };
