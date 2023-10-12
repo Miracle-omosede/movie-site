@@ -1,6 +1,6 @@
 export const logo = [
     {
-        name: 'primerie',
+        name: 'primerie.',
         link: './'
     }
 ]
